@@ -16,10 +16,11 @@
     <LangVersion>latest</LangVersion>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
-    <Compile Remove="DefaultDllImportSearchPathsAttribute.cs"/>
-    <Compile Remove="HandleProcessCorruptedStateExceptionsAttribute.cs"/>
+    <Compile Remove="DefaultDllImportSearchPathsAttribute.cs" />
+    <Compile Remove="HandleProcessCorruptedStateExceptionsAttribute.cs" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
     <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
